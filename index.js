@@ -67,6 +67,11 @@ class Person {
     this.age = age;
     this.stomach = [];
   }
+  eat(food) {
+    if (this.stomach.length < 10) {
+      return this.stomach.push(food);
+    }
+  }
   poop() {
     return this.stomach = [];
   }
@@ -146,7 +151,14 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-
+  constructor(options) {
+    this.name = options.name;
+    this.age = options.age;
+    this.location = options.location;
+  }
+  speak() {
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
+  }
 }
 
 /*
